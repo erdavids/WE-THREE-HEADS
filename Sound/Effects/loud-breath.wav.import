@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/loud-breath.wav-4d2d1b761509fcad377a0b05bcf3a7e8.sample"
+
+[deps]
+
+source_file="res://Sound/Effects/loud-breath.wav"
+dest_files=[ "res://.import/loud-breath.wav-4d2d1b761509fcad377a0b05bcf3a7e8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

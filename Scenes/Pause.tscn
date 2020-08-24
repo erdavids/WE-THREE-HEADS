@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/pause-screen.png" type="Texture" id=1]
+[ext_resource path="res://Assets/button-texture.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/ButtonFont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Scripts/Pause.gd" type="Script" id=4]
+
+[node name="Pause" type="Node2D"]
+pause_mode = 2
+z_index = 20
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+offset = Vector2( 240, 160 )
+
+[node name="Resume" type="TextureButton" parent="."]
+margin_left = 176.0
+margin_top = 104.0
+margin_right = 296.0
+margin_bottom = 152.0
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Resume"]
+margin_right = 120.0
+margin_bottom = 48.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.811765, 0.776471, 0.721569, 1 )
+text = "RESUME"
+align = 1
+valign = 1
+
+[node name="MainMenu" type="TextureButton" parent="."]
+margin_left = 176.0
+margin_top = 168.0
+margin_right = 296.0
+margin_bottom = 216.0
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MainMenu"]
+margin_right = 120.0
+margin_bottom = 48.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.811765, 0.776471, 0.721569, 1 )
+text = "MAIN MENU"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Resume" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="MainMenu" to="." method="_on_MainMenu_pressed"]

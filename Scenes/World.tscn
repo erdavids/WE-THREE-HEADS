@@ -1,0 +1,137 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Scenes/walls-two.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/walls-one.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/decorate.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scripts/World.gd" type="Script" id=5]
+[ext_resource path="res://Assets/table-chairs.png" type="Texture" id=7]
+[ext_resource path="res://Assets/bookstacks.png" type="Texture" id=8]
+[ext_resource path="res://Assets/other-bookstacks.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/alert.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scripts/book-info.gd" type="Script" id=11]
+[ext_resource path="res://Scenes/Portal.tscn" type="PackedScene" id=13]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 56, 8 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 37, 32 )
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 32.0
+
+[node name="Hub" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="walls-one" parent="." instance=ExtResource( 2 )]
+tile_data = PoolIntArray( -2, 0, 0, -1, 0, 1, -65536, 0, 1, -65535, 0, 1, -65534, 0, 2, -65509, 0, 0, -65508, 0, 1, -65507, 0, 1, -65506, 0, 2, 65534, 0, 65536, 65535, 0, 65537, 0, 0, 65537, 1, 0, 65537, 2, 0, 65538, 27, 0, 65536, 28, 0, 65537, 29, 0, 65537, 30, 0, 65538, 131070, 0, 65536, 131071, 0, 65537, 65536, 0, 65537, 65537, 0, 65537, 65538, 0, 65538, 65563, 0, 65536, 65564, 0, 65537, 65565, 0, 65537, 65566, 0, 65538, 196606, 0, 65536, 196607, 0, 65537, 131072, 0, 65537, 131073, 0, 65537, 131074, 0, 65538, 131099, 0, 65536, 131100, 0, 65537, 131101, 0, 65537, 131102, 0, 65538, 262142, 0, 65536, 262143, 0, 65537, 196608, 0, 65537, 196609, 0, 65537, 196610, 0, 65538, 196635, 0, 65536, 196636, 0, 65537, 196637, 0, 65537, 196638, 0, 65538, 327678, 0, 65536, 327679, 0, 65537, 262144, 0, 65537, 262145, 0, 65537, 262146, 0, 65538, 262171, 0, 65536, 262172, 0, 65537, 262173, 0, 65537, 262174, 0, 65538, 393214, 0, 65536, 393215, 0, 65537, 327680, 0, 65537, 327681, 0, 65537, 327682, 0, 65538, 327707, 0, 65536, 327708, 0, 65537, 327709, 0, 65537, 327710, 0, 65538, 458750, 0, 65536, 458751, 0, 65537, 393216, 0, 65537, 393217, 0, 65537, 393218, 0, 65538, 393243, 0, 65536, 393244, 0, 65537, 393245, 0, 65537, 393246, 0, 65538, 524286, 0, 65536, 524287, 0, 65537, 458752, 0, 65537, 458753, 0, 65537, 458754, 0, 65538, 458779, 0, 65536, 458780, 0, 65537, 458781, 0, 65537, 458782, 0, 65538, 589822, 0, 65536, 589823, 0, 65537, 524288, 0, 65537, 524289, 0, 65537, 524290, 0, 65538, 524315, 0, 65536, 524316, 0, 65537, 524317, 0, 65537, 524318, 0, 65538, 655358, 0, 65536, 655359, 0, 65537, 589824, 0, 65537, 589825, 0, 65537, 589826, 0, 65538, 589851, 0, 65536, 589852, 0, 65537, 589853, 0, 65537, 589854, 0, 65538, 720894, 0, 65536, 720895, 0, 65537, 655360, 0, 65537, 655361, 0, 65537, 655362, 0, 65538, 655387, 0, 65536, 655388, 0, 65537, 655389, 0, 65537, 655390, 0, 65538, 786430, 0, 65536, 786431, 0, 65537, 720896, 0, 65537, 720897, 0, 65537, 720898, 0, 65538, 720923, 0, 65536, 720924, 0, 65537, 720925, 0, 65537, 720926, 0, 65538, 851966, 0, 65536, 851967, 0, 65537, 786432, 0, 65537, 786433, 0, 65537, 786434, 0, 65538, 786459, 0, 65536, 786460, 0, 65537, 786461, 0, 65537, 786462, 0, 65538, 917502, 0, 65536, 917503, 0, 65537, 851968, 0, 65537, 851969, 0, 65537, 851970, 0, 65538, 851995, 0, 65536, 851996, 0, 65537, 851997, 0, 65537, 851998, 0, 65538, 983038, 0, 65536, 983039, 0, 65537, 917504, 0, 65537, 917505, 0, 65537, 917506, 0, 65538, 917531, 0, 65536, 917532, 0, 65537, 917533, 0, 65537, 917534, 0, 65538, 1048574, 0, 65536, 1048575, 0, 65537, 983040, 0, 65537, 983041, 0, 65537, 983042, 0, 65538, 983067, 0, 65536, 983068, 0, 65537, 983069, 0, 65537, 983070, 0, 65538, 1114110, 0, 131072, 1114111, 0, 131073, 1048576, 0, 131073, 1048577, 0, 131073, 1048578, 0, 131074, 1048603, 0, 131072, 1048604, 0, 131073, 1048605, 0, 131073, 1048606, 0, 131074, 1310718, 0, 0, 1310719, 0, 1, 1245184, 0, 1, 1245185, 0, 1, 1245186, 0, 1, 1245187, 0, 1, 1245188, 0, 1, 1245189, 0, 1, 1245190, 0, 1, 1245191, 0, 1, 1245192, 0, 1, 1245193, 0, 1, 1245194, 0, 1, 1245195, 0, 1, 1245196, 0, 1, 1245197, 0, 1, 1245198, 0, 1, 1245199, 0, 1, 1245200, 0, 1, 1245201, 0, 1, 1245202, 0, 1, 1245203, 0, 1, 1245204, 0, 1, 1245205, 0, 1, 1245206, 0, 1, 1245207, 0, 1, 1245208, 0, 1, 1245209, 0, 1, 1245210, 0, 1, 1245211, 0, 1, 1245212, 0, 1, 1245213, 0, 1, 1245214, 0, 2, 1376254, 0, 131072, 1376255, 0, 131073, 1310720, 0, 131073, 1310721, 0, 131073, 1310722, 0, 131073, 1310723, 0, 131073, 1310724, 0, 131073, 1310725, 0, 131073, 1310726, 0, 131073, 1310727, 0, 131073, 1310728, 0, 131073, 1310729, 0, 131073, 1310730, 0, 131073, 1310731, 0, 131073, 1310732, 0, 131073, 1310733, 0, 131073, 1310734, 0, 131073, 1310735, 0, 131073, 1310736, 0, 131073, 1310737, 0, 131073, 1310738, 0, 131073, 1310739, 0, 131073, 1310740, 0, 131073, 1310741, 0, 131073, 1310742, 0, 131073, 1310743, 0, 131073, 1310744, 0, 131073, 1310745, 0, 131073, 1310746, 0, 131073, 1310747, 0, 131073, 1310748, 0, 131073, 1310749, 0, 131073, 1310750, 0, 131074 )
+
+[node name="walls-three" parent="." instance=ExtResource( 4 )]
+
+[node name="walls-two" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( -65533, 0, 0, -65532, 0, 1, -65531, 0, 1, -65530, 0, 1, -65529, 0, 1, -65528, 0, 1, -65527, 0, 1, -65526, 0, 1, -65525, 0, 1, -65524, 0, 1, -65523, 0, 1, -65522, 0, 1, -65521, 0, 1, -65520, 0, 1, -65519, 0, 1, -65518, 0, 1, -65517, 0, 1, -65516, 0, 1, -65515, 0, 1, -65514, 0, 1, -65513, 0, 1, -65512, 0, 1, -65511, 0, 1, -65510, 0, 2, 3, 0, 65536, 4, 0, 65537, 5, 0, 65537, 6, 0, 65537, 7, 0, 65537, 8, 0, 65537, 9, 0, 65537, 10, 0, 65537, 11, 0, 65537, 12, 0, 65537, 13, 0, 65537, 14, 0, 65537, 15, 0, 65537, 16, 0, 65537, 17, 0, 65537, 18, 0, 65537, 19, 0, 65537, 20, 0, 65537, 21, 0, 65537, 22, 0, 65537, 23, 0, 65537, 24, 0, 65537, 25, 0, 65537, 26, 0, 65538, 65539, 0, 131072, 65540, 0, 131073, 65541, 0, 131073, 65542, 0, 131073, 65543, 0, 131073, 65544, 0, 131073, 65545, 0, 131073, 65546, 0, 131073, 65547, 0, 131073, 65548, 0, 131073, 65549, 0, 131073, 65550, 0, 131073, 65551, 0, 131073, 65552, 0, 131073, 65553, 0, 131073, 65554, 0, 131073, 65555, 0, 131073, 65556, 0, 131073, 65557, 0, 131073, 65558, 0, 131073, 65559, 0, 131073, 65560, 0, 131073, 65561, 0, 131073, 65562, 0, 131074, 1179646, 0, 0, 1179647, 0, 1, 1114112, 0, 1, 1114113, 0, 1, 1114114, 0, 2, 1114139, 0, 0, 1114140, 0, 1, 1114141, 0, 1, 1114142, 0, 2, 1245182, 0, 131072, 1245183, 0, 131073, 1179648, 0, 131073, 1179649, 0, 131073, 1179650, 0, 131074, 1179675, 0, 131072, 1179676, 0, 131073, 1179677, 0, 131073, 1179678, 0, 131074 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 240, 160 )
+z_index = 1
+
+[node name="decorations" type="Node2D" parent="."]
+
+[node name="collisions" type="Node2D" parent="decorations"]
+
+[node name="Book-Collide" type="StaticBody2D" parent="decorations/collisions"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="decorations/collisions/Book-Collide"]
+position = Vector2( 103, 104 )
+shape = SubResource( 1 )
+
+[node name="Book-Collide2" type="StaticBody2D" parent="decorations/collisions"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="decorations/collisions/Book-Collide2"]
+position = Vector2( 104, 56 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="decorations/collisions/Book-Collide2"]
+position = Vector2( 104, 80 )
+shape = SubResource( 1 )
+
+[node name="table-collide" type="StaticBody2D" parent="decorations/collisions"]
+position = Vector2( 99, 183 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="decorations/collisions/table-collide"]
+shape = SubResource( 2 )
+
+[node name="table-collide2" type="StaticBody2D" parent="decorations/collisions"]
+position = Vector2( 99, 255 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="decorations/collisions/table-collide2"]
+shape = SubResource( 2 )
+
+[node name="bookstacks" type="Sprite" parent="decorations"]
+position = Vector2( 103, 104 )
+texture = ExtResource( 8 )
+
+[node name="table-chairs" type="Sprite" parent="decorations"]
+position = Vector2( 75, 183 )
+texture = ExtResource( 7 )
+
+[node name="table-chairs2" type="Sprite" parent="decorations"]
+position = Vector2( 123, 183 )
+texture = ExtResource( 7 )
+
+[node name="table-chairs3" type="Sprite" parent="decorations"]
+position = Vector2( 75, 255 )
+texture = ExtResource( 7 )
+
+[node name="table-chairs4" type="Sprite" parent="decorations"]
+position = Vector2( 123, 255 )
+texture = ExtResource( 7 )
+
+[node name="other-bookstacks2" type="Sprite" parent="decorations"]
+position = Vector2( 135, 104 )
+texture = ExtResource( 9 )
+
+[node name="other-bookstacks3" type="Sprite" parent="decorations"]
+position = Vector2( 136, 80 )
+texture = ExtResource( 9 )
+
+[node name="other-bookstacks4" type="Sprite" parent="decorations"]
+position = Vector2( 72, 80 )
+texture = ExtResource( 9 )
+
+[node name="other-bookstacks5" type="Sprite" parent="decorations"]
+position = Vector2( 72, 56 )
+texture = ExtResource( 9 )
+
+[node name="other-bookstacks6" type="Sprite" parent="decorations"]
+position = Vector2( 136, 56 )
+texture = ExtResource( 9 )
+
+[node name="other-bookstacks7" type="Sprite" parent="decorations"]
+position = Vector2( 120, 56 )
+texture = ExtResource( 9 )
+
+[node name="other-bookstacks" type="Sprite" parent="decorations"]
+position = Vector2( 71, 104 )
+texture = ExtResource( 9 )
+
+[node name="alert" parent="." instance=ExtResource( 10 )]
+position = Vector2( 103, 88 )
+
+[node name="book-info" type="Area2D" parent="alert"]
+position = Vector2( -104, -48 )
+script = ExtResource( 11 )
+
+[node name="Info" type="CollisionShape2D" parent="alert/book-info"]
+position = Vector2( 105, 64 )
+shape = SubResource( 3 )
+
+[node name="Portal" parent="." instance=ExtResource( 13 )]
+position = Vector2( 392, 72 )

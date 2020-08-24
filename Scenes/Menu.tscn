@@ -1,0 +1,127 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Fonts/VT323-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scenes/walls-two.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/walls-three.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/walls-one.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/button-texture.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/Menu.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/ButtonFont.tres" type="DynamicFont" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 47
+font_data = ExtResource( 1 )
+
+[node name="Menu" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="walls-one" parent="." instance=ExtResource( 4 )]
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 1, 2, 0, 2, 27, 0, 0, 28, 0, 1, 29, 0, 2, 65536, 0, 65536, 65537, 0, 65537, 65538, 0, 65538, 65563, 0, 65536, 65564, 0, 65537, 65565, 0, 65538, 131072, 0, 65536, 131073, 0, 65537, 131074, 0, 65538, 131099, 0, 65536, 131100, 0, 65537, 131101, 0, 65538, 196608, 0, 65536, 196609, 0, 65537, 196610, 0, 65538, 196635, 0, 65536, 196636, 0, 65537, 196637, 0, 65538, 262144, 0, 65536, 262145, 0, 65537, 262146, 0, 65538, 262171, 0, 65536, 262172, 0, 65537, 262173, 0, 65538, 327680, 0, 65536, 327681, 0, 65537, 327682, 0, 65538, 327707, 0, 65536, 327708, 0, 65537, 327709, 0, 65538, 393216, 0, 65536, 393217, 0, 65537, 393218, 0, 65538, 393243, 0, 65536, 393244, 0, 65537, 393245, 0, 65538, 458752, 0, 65536, 458753, 0, 65537, 458754, 0, 65538, 458779, 0, 65536, 458780, 0, 65537, 458781, 0, 65538, 524288, 0, 65536, 524289, 0, 65537, 524290, 0, 65538, 524315, 0, 65536, 524316, 0, 65537, 524317, 0, 65538, 589824, 0, 65536, 589825, 0, 65537, 589826, 0, 65538, 589851, 0, 65536, 589852, 0, 65537, 589853, 0, 65538, 655360, 0, 65536, 655361, 0, 65537, 655362, 0, 65538, 655387, 0, 65536, 655388, 0, 65537, 655389, 0, 65538, 720896, 0, 65536, 720897, 0, 65537, 720898, 0, 65538, 720923, 0, 65536, 720924, 0, 65537, 720925, 0, 65538, 786432, 0, 65536, 786433, 0, 65537, 786434, 0, 65538, 786459, 0, 65536, 786460, 0, 65537, 786461, 0, 65538, 851968, 0, 65536, 851969, 0, 65537, 851970, 0, 65538, 851995, 0, 65536, 851996, 0, 65537, 851997, 0, 65538, 917504, 0, 65536, 917505, 0, 65537, 917506, 0, 65538, 917531, 0, 65536, 917532, 0, 65537, 917533, 0, 65538, 983040, 0, 65536, 983041, 0, 65537, 983042, 0, 65538, 983067, 0, 65536, 983068, 0, 65537, 983069, 0, 65538, 1048576, 0, 65536, 1048577, 0, 65537, 1048578, 0, 65538, 1048603, 0, 65536, 1048604, 0, 65537, 1048605, 0, 65538, 1114112, 0, 65536, 1114113, 0, 65537, 1114114, 0, 65538, 1114139, 0, 65536, 1114140, 0, 65537, 1114141, 0, 65538, 1179648, 0, 65536, 1179649, 0, 65537, 1179650, 0, 65538, 1179675, 0, 65536, 1179676, 0, 65537, 1179677, 0, 65538, 1245184, 0, 131072, 1245185, 0, 131073, 1245186, 0, 131074, 1245211, 0, 131072, 1245212, 0, 131073, 1245213, 0, 131074 )
+
+[node name="decorate" parent="." instance=ExtResource( 3 )]
+
+[node name="walls-two" parent="." instance=ExtResource( 2 )]
+
+[node name="Title" type="Label" parent="."]
+margin_top = 20.0
+margin_right = 480.0
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.811765, 0.776471, 0.721569, 1 )
+text = "WE THREE HEADS"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NormalMode" type="TextureButton" parent="."]
+margin_left = 180.0
+margin_top = 80.0
+margin_right = 300.0
+margin_bottom = 128.0
+texture_normal = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="NormalMode"]
+margin_right = 120.0
+margin_bottom = 47.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0.811765, 0.776471, 0.721569, 1 )
+text = "NORMAL"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Impossible" type="TextureButton" parent="."]
+margin_left = 180.0
+margin_top = 130.0
+margin_right = 300.0
+margin_bottom = 178.0
+texture_normal = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Impossible"]
+margin_right = 120.0
+margin_bottom = 47.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0.811765, 0.776471, 0.721569, 1 )
+text = "IMPOSSIBLE"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="HowTo" type="TextureButton" parent="."]
+margin_left = 180.0
+margin_top = 180.0
+margin_right = 300.0
+margin_bottom = 228.0
+texture_normal = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HowTo"]
+margin_right = 120.0
+margin_bottom = 47.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0.811765, 0.776471, 0.721569, 1 )
+text = "HOW TO PLAY"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Credits" type="TextureButton" parent="."]
+margin_left = 180.0
+margin_top = 230.0
+margin_right = 300.0
+margin_bottom = 278.0
+texture_normal = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Credits"]
+margin_right = 120.0
+margin_bottom = 47.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0.811765, 0.776471, 0.721569, 1 )
+text = "CREDITS"
+align = 1
+valign = 1
+autowrap = true
+[connection signal="pressed" from="NormalMode" to="." method="_on_NormalMode_pressed"]
+[connection signal="pressed" from="Impossible" to="." method="_on_Impossible_pressed"]
+[connection signal="pressed" from="HowTo" to="." method="_on_HowTo_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]

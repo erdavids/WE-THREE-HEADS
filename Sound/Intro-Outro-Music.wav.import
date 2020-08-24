@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Intro-Outro-Music.wav-e106fe16d519cfc1cd96b103ffe2f3bf.sample"
+
+[deps]
+
+source_file="res://Sound/Intro-Outro-Music.wav"
+dest_files=[ "res://.import/Intro-Outro-Music.wav-e106fe16d519cfc1cd96b103ffe2f3bf.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sword-reflect 12.11.46 AM.wav-be1404c79312ff045d36b45e150aef46.sample"
+
+[deps]
+
+source_file="res://Sound/Effects/sword-reflect 12.11.46 AM.wav"
+dest_files=[ "res://.import/sword-reflect 12.11.46 AM.wav-be1404c79312ff045d36b45e150aef46.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

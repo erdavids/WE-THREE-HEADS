@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Intro-Outro-Song.wav-a1cd445cf624edf00364df8f1b05c156.sample"
+
+[deps]
+
+source_file="res://Sound/Effects/Intro-Outro-Song.wav"
+dest_files=[ "res://.import/Intro-Outro-Song.wav-a1cd445cf624edf00364df8f1b05c156.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sharpen.wav-375200c9dd213732a702327ff9867dda.sample"
+
+[deps]
+
+source_file="res://Sound/Effects/sharpen.wav"
+dest_files=[ "res://.import/sharpen.wav-375200c9dd213732a702327ff9867dda.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

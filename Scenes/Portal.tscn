@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Portal.gd" type="Script" id=1]
+[ext_resource path="res://Assets/inner-portal.png" type="Texture" id=2]
+[ext_resource path="res://Assets/outer-portal.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 3.48064
+
+[node name="Portal" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Inner" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="Outer" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+
+[node name="portal" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="portal"]
+shape = SubResource( 1 )

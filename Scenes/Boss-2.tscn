@@ -1,0 +1,300 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Scenes/walls-one.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/walls-two.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/walls-three.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/head-3.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/potion.gd" type="Script" id=6]
+[ext_resource path="res://Assets/health-bar-front.png" type="Texture" id=7]
+[ext_resource path="res://Assets/health-bar-back.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Potions/potion-1.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/boss-2-head.gd" type="Script" id=10]
+[ext_resource path="res://Scenes/ButtonFont.tres" type="DynamicFont" id=11]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 1.02998
+height = 0.0
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 11.7313
+
+[node name="Boss-2" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 240, 232 )
+
+[node name="walls-one" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( -65530, 0, 131072, -65529, 0, 131072, -65528, 0, 131072, -65527, 0, 131072, -65526, 0, 131072, -65525, 0, 131072, -65524, 0, 131072, -65523, 0, 131072, -65522, 0, 131072, -65521, 0, 131072, -65520, 0, 131072, -65519, 0, 131072, -65518, 0, 131072, -65517, 0, 131072, -65516, 0, 131072, -65515, 0, 131072, -65514, 0, 131072, -65513, 0, 131072, 1310726, 0, 131072, 1310727, 0, 131072, 1310728, 0, 131072, 1310729, 0, 131072, 1310730, 0, 131072, 1310731, 0, 131072, 1310732, 0, 131072, 1310733, 0, 131072, 1310734, 0, 131072, 1310735, 0, 131072, 1310736, 0, 131072, 1310737, 0, 131072, 1310738, 0, 131072, 1310739, 0, 131072, 1310740, 0, 131072, 1310741, 0, 131072, 1310742, 0, 131072, 1310743, 0, 131072 )
+
+[node name="walls-two" parent="." instance=ExtResource( 2 )]
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 1, 2, 0, 2, 4, 0, 0, 5, 0, 2, 24, 0, 0, 25, 0, 2, 27, 0, 0, 28, 0, 1, 29, 0, 2, 65536, 0, 65536, 65537, 0, 65537, 65538, 0, 65538, 65540, 0, 65536, 65541, 0, 65538, 65560, 0, 65536, 65561, 0, 65538, 65563, 0, 65536, 65564, 0, 65537, 65565, 0, 65538, 131072, 0, 65536, 131073, 0, 65537, 131074, 0, 65538, 131076, 0, 65536, 131077, 0, 65538, 131096, 0, 65536, 131097, 0, 65538, 131099, 0, 65536, 131100, 0, 65537, 131101, 0, 65538, 196608, 0, 65536, 196609, 0, 65537, 196610, 0, 65538, 196612, 0, 65536, 196613, 0, 65538, 196632, 0, 65536, 196633, 0, 65538, 196635, 0, 65536, 196636, 0, 65537, 196637, 0, 65538, 262144, 0, 65536, 262145, 0, 65537, 262146, 0, 65538, 262148, 0, 65536, 262149, 0, 65538, 262168, 0, 65536, 262169, 0, 65538, 262171, 0, 65536, 262172, 0, 65537, 262173, 0, 65538, 327680, 0, 65536, 327681, 0, 65537, 327682, 0, 65538, 327684, 0, 65536, 327685, 0, 65538, 327704, 0, 65536, 327705, 0, 65538, 327707, 0, 65536, 327708, 0, 65537, 327709, 0, 65538, 393216, 0, 65536, 393217, 0, 65537, 393218, 0, 65538, 393220, 0, 65536, 393221, 0, 65538, 393240, 0, 65536, 393241, 0, 65538, 393243, 0, 65536, 393244, 0, 65537, 393245, 0, 65538, 458752, 0, 65536, 458753, 0, 65537, 458754, 0, 65538, 458756, 0, 65536, 458757, 0, 65538, 458776, 0, 65536, 458777, 0, 65538, 458779, 0, 65536, 458780, 0, 65537, 458781, 0, 65538, 524288, 0, 65536, 524289, 0, 65537, 524290, 0, 65538, 524292, 0, 65536, 524293, 0, 65538, 524312, 0, 65536, 524313, 0, 65538, 524315, 0, 65536, 524316, 0, 65537, 524317, 0, 65538, 589824, 0, 65536, 589825, 0, 65537, 589826, 0, 65538, 589828, 0, 65536, 589829, 0, 65538, 589848, 0, 65536, 589849, 0, 65538, 589851, 0, 65536, 589852, 0, 65537, 589853, 0, 65538, 655360, 0, 65536, 655361, 0, 65537, 655362, 0, 65538, 655364, 0, 65536, 655365, 0, 65538, 655384, 0, 65536, 655385, 0, 65538, 655387, 0, 65536, 655388, 0, 65537, 655389, 0, 65538, 720896, 0, 65536, 720897, 0, 65537, 720898, 0, 65538, 720900, 0, 65536, 720901, 0, 65538, 720920, 0, 65536, 720921, 0, 65538, 720923, 0, 65536, 720924, 0, 65537, 720925, 0, 65538, 786432, 0, 65536, 786433, 0, 65537, 786434, 0, 65538, 786436, 0, 65536, 786437, 0, 65538, 786456, 0, 65536, 786457, 0, 65538, 786459, 0, 65536, 786460, 0, 65537, 786461, 0, 65538, 851968, 0, 65536, 851969, 0, 65537, 851970, 0, 65538, 851972, 0, 65536, 851973, 0, 65538, 851992, 0, 65536, 851993, 0, 65538, 851995, 0, 65536, 851996, 0, 65537, 851997, 0, 65538, 917504, 0, 65536, 917505, 0, 65537, 917506, 0, 65538, 917508, 0, 65536, 917509, 0, 65538, 917528, 0, 65536, 917529, 0, 65538, 917531, 0, 65536, 917532, 0, 65537, 917533, 0, 65538, 983040, 0, 65536, 983041, 0, 65537, 983042, 0, 65538, 983044, 0, 65536, 983045, 0, 65538, 983064, 0, 65536, 983065, 0, 65538, 983067, 0, 65536, 983068, 0, 65537, 983069, 0, 65538, 1048576, 0, 65536, 1048577, 0, 65537, 1048578, 0, 65538, 1048580, 0, 65536, 1048581, 0, 65538, 1048600, 0, 65536, 1048601, 0, 65538, 1048603, 0, 65536, 1048604, 0, 65537, 1048605, 0, 65538, 1114112, 0, 65536, 1114113, 0, 65537, 1114114, 0, 65538, 1114116, 0, 65536, 1114117, 0, 65538, 1114136, 0, 65536, 1114137, 0, 65538, 1114139, 0, 65536, 1114140, 0, 65537, 1114141, 0, 65538, 1179648, 0, 65536, 1179649, 0, 65537, 1179650, 0, 65538, 1179652, 0, 65536, 1179653, 0, 65538, 1179672, 0, 65536, 1179673, 0, 65538, 1179675, 0, 65536, 1179676, 0, 65537, 1179677, 0, 65538, 1245184, 0, 131072, 1245185, 0, 131073, 1245186, 0, 131074, 1245188, 0, 131072, 1245189, 0, 131074, 1245208, 0, 131072, 1245209, 0, 131074, 1245211, 0, 131072, 1245212, 0, 131073, 1245213, 0, 131074 )
+
+[node name="decorate" parent="." instance=ExtResource( 3 )]
+
+[node name="boss-health" type="TextureProgress" parent="."]
+margin_left = 184.0
+margin_top = 272.0
+margin_right = 300.0
+margin_bottom = 277.0
+max_value = 200.0
+value = 200.0
+texture_under = ExtResource( 8 )
+texture_progress = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="potions" type="Node2D" parent="."]
+
+[node name="blue-potion" type="Sprite" parent="potions"]
+position = Vector2( 149, 182.5 )
+z_index = -3
+texture = ExtResource( 9 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="potion" type="Area2D" parent="potions/blue-potion"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="potions/blue-potion/potion"]
+shape = SubResource( 1 )
+
+[node name="blue-potion2" type="Sprite" parent="potions"]
+position = Vector2( 181, 182.5 )
+z_index = -3
+texture = ExtResource( 9 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="potion" type="Area2D" parent="potions/blue-potion2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="potions/blue-potion2/potion"]
+shape = SubResource( 1 )
+
+[node name="blue-potion3" type="Sprite" parent="potions"]
+position = Vector2( 293, 182.5 )
+z_index = -3
+texture = ExtResource( 9 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="potion" type="Area2D" parent="potions/blue-potion3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="potions/blue-potion3/potion"]
+shape = SubResource( 1 )
+
+[node name="blue-potion4" type="Sprite" parent="potions"]
+position = Vector2( 325, 182.5 )
+z_index = -3
+texture = ExtResource( 9 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="potion" type="Area2D" parent="potions/blue-potion4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="potions/blue-potion4/potion"]
+shape = SubResource( 1 )
+
+[node name="blue-potion5" type="Sprite" parent="potions"]
+position = Vector2( 325, 150.5 )
+z_index = -3
+texture = ExtResource( 9 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="potion" type="Area2D" parent="potions/blue-potion5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="potions/blue-potion5/potion"]
+shape = SubResource( 1 )
+
+[node name="blue-potion6" type="Sprite" parent="potions"]
+position = Vector2( 293, 150.5 )
+z_index = -3
+texture = ExtResource( 9 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="potion" type="Area2D" parent="potions/blue-potion6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="potions/blue-potion6/potion"]
+shape = SubResource( 1 )
+
+[node name="blue-potion7" type="Sprite" parent="potions"]
+position = Vector2( 181, 150.5 )
+z_index = -3
+texture = ExtResource( 9 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="potion" type="Area2D" parent="potions/blue-potion7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="potions/blue-potion7/potion"]
+shape = SubResource( 1 )
+
+[node name="blue-potion8" type="Sprite" parent="potions"]
+position = Vector2( 149, 150.5 )
+z_index = -3
+texture = ExtResource( 9 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="potion" type="Area2D" parent="potions/blue-potion8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="potions/blue-potion8/potion"]
+shape = SubResource( 1 )
+
+[node name="blue-potion9" type="Sprite" parent="potions"]
+position = Vector2( 149, 118.5 )
+z_index = -3
+texture = ExtResource( 9 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="potion" type="Area2D" parent="potions/blue-potion9"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="potions/blue-potion9/potion"]
+shape = SubResource( 1 )
+
+[node name="blue-potion10" type="Sprite" parent="potions"]
+position = Vector2( 181, 118.5 )
+z_index = -3
+texture = ExtResource( 9 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="potion" type="Area2D" parent="potions/blue-potion10"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="potions/blue-potion10/potion"]
+shape = SubResource( 1 )
+
+[node name="blue-potion11" type="Sprite" parent="potions"]
+position = Vector2( 293, 118.5 )
+z_index = -3
+texture = ExtResource( 9 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="potion" type="Area2D" parent="potions/blue-potion11"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="potions/blue-potion11/potion"]
+shape = SubResource( 1 )
+
+[node name="blue-potion12" type="Sprite" parent="potions"]
+position = Vector2( 325, 118.5 )
+z_index = -3
+texture = ExtResource( 9 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="potion" type="Area2D" parent="potions/blue-potion12"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="potions/blue-potion12/potion"]
+shape = SubResource( 1 )
+
+[node name="blue-potion13" type="Sprite" parent="potions"]
+position = Vector2( 325, 86.5 )
+z_index = -3
+texture = ExtResource( 9 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="potion" type="Area2D" parent="potions/blue-potion13"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="potions/blue-potion13/potion"]
+shape = SubResource( 1 )
+
+[node name="blue-potion14" type="Sprite" parent="potions"]
+position = Vector2( 293, 86.5 )
+z_index = -3
+texture = ExtResource( 9 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="potion" type="Area2D" parent="potions/blue-potion14"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="potions/blue-potion14/potion"]
+shape = SubResource( 1 )
+
+[node name="blue-potion15" type="Sprite" parent="potions"]
+position = Vector2( 181, 86.5 )
+z_index = -3
+texture = ExtResource( 9 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="potion" type="Area2D" parent="potions/blue-potion15"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="potions/blue-potion15/potion"]
+shape = SubResource( 1 )
+
+[node name="blue-potion16" type="Sprite" parent="potions"]
+position = Vector2( 149, 86.5 )
+z_index = -3
+texture = ExtResource( 9 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="potion" type="Area2D" parent="potions/blue-potion16"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="potions/blue-potion16/potion"]
+shape = SubResource( 1 )
+
+[node name="boss-head" type="Sprite" parent="."]
+position = Vector2( 240, 88 )
+texture = ExtResource( 5 )
+script = ExtResource( 10 )
+
+[node name="boss-collide" type="Area2D" parent="boss-head"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="boss-head/boss-collide"]
+shape = SubResource( 2 )
+
+[node name="KillTimer" type="Timer" parent="boss-head"]
+
+[node name="Label" type="Label" parent="boss-head"]
+margin_left = -72.0
+margin_top = 32.0
+margin_right = 72.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 11 )
+custom_colors/font_color = Color( 0.811765, 0.776471, 0.721569, 1 )
+text = "TIMER"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="body_entered" from="potions/blue-potion/potion" to="potions/blue-potion" method="_on_potion_body_entered"]
+[connection signal="timeout" from="boss-head/KillTimer" to="boss-head" method="_on_KillTimer_timeout"]

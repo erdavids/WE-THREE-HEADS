@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Boss-Particles.gd" type="Script" id=1]
+[ext_resource path="res://Sound/Effects/glass-break 1.wav" type="AudioStream" id=2]
+[ext_resource path="res://Sound/Effects/blow.wav" type="AudioStream" id=3]
+
+[node name="Boss-Particles" type="CPUParticles2D"]
+z_index = 3
+emitting = false
+amount = 2000
+lifetime = 6.0
+one_shot = true
+speed_scale = 3.0
+explosiveness = 0.6
+emission_shape = 1
+emission_sphere_radius = 3.0
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 96.09
+angle_random = 1.0
+scale_amount = 3.0
+color = Color( 0.811765, 0.776471, 0.721569, 1 )
+script = ExtResource( 1 )
+
+[node name="Glass" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -25.0
+
+[node name="Air" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )

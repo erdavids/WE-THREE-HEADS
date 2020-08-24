@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sound/Effects/click 1.wav" type="AudioStream" id=1]
+[ext_resource path="res://Scripts/arrow-click.gd" type="Script" id=2]
+
+[node name="arrow-click" type="AudioStreamPlayer"]
+stream = ExtResource( 1 )
+volume_db = -5.0
+script = ExtResource( 2 )
+[connection signal="finished" from="." to="." method="_on_arrowclick_finished"]
